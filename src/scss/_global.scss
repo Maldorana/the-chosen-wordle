@@ -1,0 +1,16 @@
+/*
+  Custom styles
+*/
+
+.html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: sans-serif;
+
+    @media (max-height: 600px) {
+        $game-spacing: 8px;
+    }
+  }
+  

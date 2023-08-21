@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import classes from './GuessInput.module.scss';
 
 function GuessInput({ handleSubmitGuess }) {
   const [guess, setGuess] = useState('');
@@ -24,7 +25,10 @@ function GuessInput({ handleSubmitGuess }) {
   };
 
   return (
-    <form className='guess-input-wrapper' onSubmit={(e) => handleSubmit(e)}>
+    <form
+      className={classes['guess-input-wrapper']}
+      onSubmit={(e) => handleSubmit(e)}
+    >
       <label htmlFor='submit-guess'>Enter guess:</label>
       <input
         required

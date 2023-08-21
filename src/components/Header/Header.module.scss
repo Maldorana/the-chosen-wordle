@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: $header-height;
+  border-bottom: 1px solid $color-gray-700;
+  color: $color-gray-300;
+
+  h1 {
+    font-family: $title-font;
+    font-weight: 900;
+    color: black;
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+
+    @media (max-width: 25rem) {
+        font-size: 1.9rem;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+}

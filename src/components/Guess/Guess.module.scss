@@ -1,0 +1,33 @@
+.guess {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+
+.cell {
+  position: relative;
+  width: 20%;
+  display: grid;
+  place-content: center;
+  aspect-ratio: 1 / 1;
+  border: 2px solid $color-gray-700;
+  font-size: 2rem;
+
+  &.correct {
+    background: $color-success;
+    border-color: $color-success;
+    color: white;
+  }
+  
+  &.incorrect {
+    background: $color-gray-300;
+    border-color: $color-gray-300;
+    color: white;
+  }
+  
+  &.misplaced {
+    background: $color-warning;
+    border-color: $color-warning;
+    color: white;
+  }
+}

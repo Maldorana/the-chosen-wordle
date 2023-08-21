@@ -1,6 +1,8 @@
 import React from 'react';
 import { range } from '../../utils';
 import { checkGuess } from '../../game-helpers';
+import classes from './Guess.module.scss';
+import classnames from 'classnames';
 
 function Guess({ value, answer }) {
   const cellArray = range(5);
@@ -8,9 +10,13 @@ function Guess({ value, answer }) {
 
   return (
     <>
-      <p className='guess'>
+      <p className={classes['guess']}>
         {cellArray.map((cell) => {
-          const cellClass = value ? `cell ${checking[cell].status}` : 'cell';
+          const cellClass = value
+            ? classnames(classes['cell'], {
+                [classes[checking[cell].status]]: checking[cell].status,
+              })
+            : classes['cell'];
 
           return (
             <span key={`letter-${cell}`} className={`${cellClass}`}>

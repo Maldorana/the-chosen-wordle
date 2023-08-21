@@ -1,10 +1,12 @@
 import React from 'react';
+import classes from './Banner.module.scss';
+import classnames from 'classnames';
 
 function Banner({ gameStatus, numOfGuesses, answer }) {
   return (
     <>
       {gameStatus === 'win' && (
-        <div class='happy banner'>
+        <div className={classnames(classes['banner'], classes['happy'])}>
           <p>
             <strong>Congratulations!</strong> Got it in
             <strong> {numOfGuesses} guesses</strong>.
@@ -13,7 +15,7 @@ function Banner({ gameStatus, numOfGuesses, answer }) {
         </div>
       )}
       {gameStatus === 'lose' && (
-        <div class='sad banner'>
+        <div className={classnames(classes['banner'], classes['sad'])}>
           <p>
             Sorry, the correct answer was <strong>{answer}</strong>.
           </p>
