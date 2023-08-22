@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import classes from './GuessInput.module.scss';
 
 function GuessInput({ handleSubmitGuess }) {
   const [guess, setGuess] = useState('');
+  const inputRef = useRef(null);
+
+  // Auto-focus on the input field when mounting
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   // Handlers
   // Input change handler
@@ -22,6 +28,7 @@ function GuessInput({ handleSubmitGuess }) {
     setGuess(guess);
     handleSubmitGuess(guess);
     setGuess('');
+    inputRef.current.focus();
   };
 
   return (
@@ -32,6 +39,7 @@ function GuessInput({ handleSubmitGuess }) {
       <label htmlFor='submit-guess'>Enter guess:</label>
       <input
         required
+        ref={inputRef}
         maxLength={5}
         pattern='[a-zA-Z]{5}'
         id='submit-guess'
