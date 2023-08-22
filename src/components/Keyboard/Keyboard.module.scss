@@ -1,0 +1,50 @@
+.keyboard {
+    margin: 0;
+}
+
+.keyboardLine {
+    display: flex;
+    width: 100%;
+    margin: 0 auto 3px;
+
+    @media (min-width: 25rem) {
+        width: fit-content; 
+        margin: 0 auto 5px;
+    }
+}
+
+.keyboardKey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    flex: 1;
+    background-color: $color-greyscale-4;
+    border-radius: 4px;
+    margin-right: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+    @media (min-width: 25rem) {
+        height: 50px;
+        width: 34px;    
+        margin-right: 5px;
+        font-size: 1rem;
+    }
+}
+
+.keyboardHalfSpace {
+    @media (max-width: 25rem) {
+        flex: .5;
+    }
+}
+
+.keyboardSpace {
+    @media (max-width: 25rem) {
+        flex: 1.5;
+    }
+}

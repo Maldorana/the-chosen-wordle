@@ -362,7 +362,7 @@ module.exports = function (webpackEnv) {
                   options: {
                     additionalData: `@import "${path.resolve(
                       __dirname,
-                      '../src/scss/index.scss'
+                      '../src/scss/_vars.scss'
                     )}";`,
                   },
                 },

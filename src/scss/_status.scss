@@ -1,0 +1,19 @@
+body {
+    .correct {
+        background: $color-success;
+        border-color: $color-success;
+        color: white;
+      }
+      
+      .incorrect {
+        background: $color-greyscale-3;
+        border-color: $color-greyscale-3;
+        color: white;
+      }
+      
+      .misplaced {
+        background: $color-misplaced;
+        border-color: $color-misplaced;
+        color: white;
+      }
+}

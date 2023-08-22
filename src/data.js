@@ -15,7 +15,7 @@ export const WORDS = [
   'HEART',
   'MAGIC',
   'WITCH',
-  'FANGY',
+  'FANGS',
   'BUMPY',
   'DEMON',
   'DARLA',
@@ -82,4 +82,5 @@ export const WORDS = [
   'ALIVE',
   'WORLD',
   'COMFY',
+  'BARMY',
 ];

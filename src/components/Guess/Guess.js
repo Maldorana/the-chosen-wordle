@@ -14,7 +14,7 @@ function Guess({ value, answer }) {
         {cellArray.map((cell) => {
           const cellClass = value
             ? classnames(classes['cell'], {
-                [classes[checking[cell].status]]: checking[cell].status,
+                [checking[cell].status]: checking[cell].status,
               })
             : classes['cell'];
 

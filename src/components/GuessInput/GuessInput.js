@@ -34,7 +34,7 @@ function GuessInput({ handleSubmitGuess }) {
         required
         maxLength={5}
         pattern='[a-zA-Z]{5}'
-        name='submit-guess'
+        id='submit-guess'
         title='5 letter word'
         value={guess}
         onChange={(e) => handleInputChange(e)}

@@ -1,8 +1,15 @@
 .guess-input-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    height: 6.75rem;
+    gap: 2px;
+    height: 5.8rem;
+    margin-top: -10px;
+
+    @media (min-width: 25rem) {
+      gap: 8px;
+      height: 6rem;
+      margin-top: -15px;
+    }
 
     label {
         font-size: 1.25rem;
@@ -11,10 +18,15 @@
     input {
       display: block;
       width: 100%;
-      font-size: 2rem;
-      border: 2px solid $color-gray-300;
+      font-size: 1.5rem;
+      border: 2px solid $color-greyscale-4;
       border-radius: 4px;
       padding: 8px 16px;
       outline-offset: 4px;
+
+      &:focus-visible {
+        outline: none;
+        border: 2px solid $color-greyscale-3;
+      }
     }
   }
